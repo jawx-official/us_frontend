@@ -1,0 +1,22 @@
+image: node:16.10
+
+prod_server:
+  before_script:
+    - apt-get update
+    - apt-get --yes --force-yes install rsync
+  only:
+    refs:
+      - production
+    
+  script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    # Run ssh-agent (inside the build environment)
+    - eval $(ssh-agent -s)
+    # Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - rsync -avrc --delete --exclude=.env "$PWD/" root@$SERVER_IP:/var/www/html/$PROJECT_NAME/
+    - ssh root@$SERVER_IP "cd /var/www/html/$PROJECT_NAME/; npm i; npm run generate"
+   
+   
