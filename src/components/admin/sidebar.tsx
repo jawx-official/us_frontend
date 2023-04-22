@@ -105,7 +105,7 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
                 p="2"
                 mx="4"
                 bg={rest.active ? 'cyan.400' : 'transparent'}
-                color={rest.active ? 'white' : 'brand.dark'}
+                color={rest.active ? 'white' : 'brand.white'}
                 borderRadius="lg"
                 role="group"
                 cursor="pointer"

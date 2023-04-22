@@ -33,7 +33,7 @@ export default function Finish({ disabled, prevFn, nextFn }: StepsProps) {
             })} minH={"300px"} >
 
                 <Flex w={"100%"} mt={'10'} justifyContent={"center"} h={"150px"} alignItems={"center"}>
-                    <Box w={'40'} h={'40'} display="flex" justifyContent={"center"} alignItems={"center"} bg={'brand.dark'} rounded={'full'}>
+                    <Box w={'40'} h={'40'} display="flex" justifyContent={"center"} alignItems={"center"} bg={'brand.white'} rounded={'full'}>
                         <FiCheck fontSize={"60px"} color="gray.400" />
                     </Box>
                 </Flex>

@@ -10,7 +10,6 @@ import {
 } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { ReactNode } from 'react';
-import { AppLogo } from '.';
 
 const SocialButton = ({
     children,
@@ -47,7 +46,7 @@ const SocialButton = ({
 export default function MainFooter() {
     return (
         <Box
-            bg={'brand.dark'}
+            bg={'brand.white'}
             color={useColorModeValue('gray.700', 'gray.200')}>
             <Container
                 as={Stack}
@@ -56,7 +55,6 @@ export default function MainFooter() {
                 spacing={4}
                 justify={'center'}
                 align={'center'}>
-                <AppLogo />
                 <Stack direction={'row'} spacing={6}>
                     <Link color={'gray.400'} href={'/'}>Home</Link>
                     <Link color={'gray.400'} href={'/admin/auth'}>Admin</Link>

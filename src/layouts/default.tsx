@@ -15,18 +15,12 @@ function defaultLayout({ children }: { children: ReactElement }) {
         } else {
             return <>
                 <DefaultNavigationBar />
-                <Grid minH={'93vh'} p={5} bg={'brand.dark'}
-                    templateColumns='repeat(16, 1fr)'
+                <Grid minH={'93vh'} p={5} bg={'brand.white'}
+                    templateColumns='repeat(12, 1fr)'
                     gap={4}
                 >
-                    <GridItem display={useBreakpointValue({ base: "none", md: "none", lg: "none", xl: "flex" })} colSpan={2}>
-                        <Text color={"white"}></Text>
-                    </GridItem>
-                    <GridItem colSpan={useBreakpointValue({ base: 12, md: 12, lg: 10, xl: 10 })} overflow={"auto"}>
+                    <GridItem colSpan={useBreakpointValue({ base: 12, md: 12, lg: 12, xl: 12 })} overflow={"auto"}>
                         <main className=''>{children}</main>
-                    </GridItem>
-                    <GridItem display={useBreakpointValue({ base: "none", md: "none", lg: "flex" })} colSpan={useBreakpointValue({ base: 12, md: 12, lg: 4, xl: 4 })}>
-                        <LayoutRightSide defaultScreen='register' />
                     </GridItem>
                 </Grid>
                 <MainFooter />

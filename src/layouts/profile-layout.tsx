@@ -10,7 +10,7 @@ function ProfileLayout({ children }: { children: ReactElement }) {
     return (
         <>
             <DefaultNavigationBar />
-            <Grid minH={'93vh'} p={5} bg={'brand.dark'}
+            <Grid minH={'93vh'} p={5} bg={'brand.white'}
                 templateColumns='repeat(16, 1fr)'
                 gap={4}
             >

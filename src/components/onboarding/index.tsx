@@ -17,7 +17,7 @@ export default function Onboard({ hideLogout }: Props) {
     return (
         <>
             <PageMetaComponent title='Stage seekers - Artist onboarding' description='Bringing stage performers and event organizers in a comprehensive marketplace' />
-            <Box minH={'100vh'} p={5} bg={'brand.dark'} display={"flex"} flexDir="column">
+            <Box minH={'100vh'} p={5} bg={'brand.white'} display={"flex"} flexDir="column">
                 <Flex pb={3} borderBottom={"1px"} borderColor={"gray.500"} justifyContent={'space-between'}>
                     <Box>
                         <Text fontSize={'2xl'} letterSpacing={'wider'} fontWeight={'bold'} textTransform={'capitalize'} color={'gray.300'}>{`${user?.accountType} onboarding`}</Text>

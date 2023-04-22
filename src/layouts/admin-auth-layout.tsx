@@ -4,7 +4,7 @@ import React, { ReactElement } from 'react'
 function adminAuthLayout({ children }: { children: ReactElement }) {
     return (
         <div className=''>
-            <Grid minH={'100vh'} p={5} bg={'brand.dark'}
+            <Grid minH={'100vh'} p={5} bg={'brand.white'}
                 templateColumns='repeat(12, 1fr)'
                 gap={4}
             >

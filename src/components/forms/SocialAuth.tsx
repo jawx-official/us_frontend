@@ -125,7 +125,7 @@ export default function SocialAuth({ title, role }: SocialAuthProps) {
         <div>
             <Button onClick={
                 () => btnClickAction()
-            } w={'full'} bg={'brand.darker'} _hover={{ bg: 'brand.dark' }} variant={'outline'} leftIcon={<FcGoogle />}>
+            } w={'full'} bg={'brand.darker'} _hover={{ bg: 'brand.white' }} variant={'outline'} leftIcon={<FcGoogle />}>
                 <Center>
                     <Text color={'gray.400'}>{title}</Text>
                 </Center>

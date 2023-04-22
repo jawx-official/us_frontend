@@ -47,8 +47,8 @@ export default function GalleryCarouselMini({ cards }: { cards: string[] }) {
                         <Flex flexDir={'column'} justifyContent={'space-between'} alignItems={'center'} h={'230px'}>
                             <Box></Box>
                             <Flex gap={2} justifyContent={'center'} roundedTop={'xl'} w={"100px"} h={"60px"} py={2} bg="gray.300">
-                                <IconButton rounded={'full'} bg={'brand.darker'} _hover={{ bg: 'brand.dark' }} h={8} size={'xs'} w={8} border={'brand.darker'} icon={<Icon fill={'white'} border={'white'} fontSize={'xl'} as={FiHeart} />} aria-label={'like-button'} />
-                                <IconButton rounded={'full'} bg={'brand.darker'} _hover={{ bg: 'brand.dark' }} h={8} size={'xs'} w={8} border={'brand.darker'} icon={<Icon fill={'white'} border={'white'} fontSize={'xl'} as={FiMessageSquare} />} aria-label={'message-button'} />
+                                <IconButton rounded={'full'} bg={'brand.darker'} _hover={{ bg: 'brand.white' }} h={8} size={'xs'} w={8} border={'brand.darker'} icon={<Icon fill={'white'} border={'white'} fontSize={'xl'} as={FiHeart} />} aria-label={'like-button'} />
+                                <IconButton rounded={'full'} bg={'brand.darker'} _hover={{ bg: 'brand.white' }} h={8} size={'xs'} w={8} border={'brand.darker'} icon={<Icon fill={'white'} border={'white'} fontSize={'xl'} as={FiMessageSquare} />} aria-label={'message-button'} />
                             </Flex>
                         </Flex>
                     </Box>
