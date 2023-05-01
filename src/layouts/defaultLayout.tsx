@@ -8,7 +8,7 @@ interface Props {
 }
 export default function DefaultLayout({ children }: Props) {
     return <>
-        <Box bg={'#131B23'}>
+        <Box bg={'brand.primary'}>
             <MainNavigation />
         </Box>
         <Box minH={'80vh'}>

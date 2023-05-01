@@ -10,7 +10,7 @@ export default function MobileDrawer({ menu }: { menu: NavigationItems[] }) {
 
     return (
         <Flex >
-            <Button size={'xs'} _hover={{ bg: 'transparent', color: 'gray.400' }} bg={'transparent'} onClick={onOpen}>
+            <Button _hover={{ bg: 'transparent', color: 'gray.400' }} bg={'transparent'} onClick={onOpen}>
                 <HamburgerIcon color={'white'} />
             </Button>
 

@@ -21,7 +21,7 @@ export default function DrawerExample({
                 onClose={onClose}
             >
                 <DrawerOverlay />
-                <DrawerContent maxW={width} bg={'#131B23'} alignItems="center">
+                <DrawerContent maxW={width} bg={'brand.primary'} alignItems="center">
                     <DrawerCloseButton color={"white"} alignSelf="end" mx={p} my={p} />
                     <DrawerBody mt={"16"}>{children}</DrawerBody>
                 </DrawerContent>

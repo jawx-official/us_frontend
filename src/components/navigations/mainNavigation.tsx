@@ -72,6 +72,10 @@ const data: NavigationItems[] = [
                 path: "/find-agent"
             },
             {
+                label: "Offices for rent",
+                path: "/find-agent"
+            },
+            {
                 label: "Renting guide",
                 path: "/buying-guide"
             },
@@ -129,7 +133,7 @@ export default function MainNavigation() {
         <Flex
             w="100vw"
             px="5"
-            py="1"
+            py="2"
             align="center"
             justify="space-between"
         >
@@ -141,7 +145,7 @@ export default function MainNavigation() {
                         {item.label}
                     </MenuButton>
                     <MenuList rounded={'xl'} w={'320px'} shadow={'xl'} bg={'white'}>
-                        {item.children?.map((child) => (<MenuItem px={'10'}>{child.label}</MenuItem>))}
+                        {item.children?.map((child) => (<MenuItem px={'5'} fontSize={'13px'}>{child.label}</MenuItem>))}
                     </MenuList>
                 </Menu>) : (
                     <Button color={'white'} as={Link} href={item.path} _hover={{ bg: 'transparent', color: 'gray.400' }} _active={{ bg: 'transparent', color: 'gray.400' }} bg={'transparent'} fontSize={'13px'} key={i}> {item.label} </Button>
@@ -149,10 +153,10 @@ export default function MainNavigation() {
             </HStack>}
 
             <HStack mr={''}>
-                <Button _hover={{ bg: 'transparent', color: 'gray.400' }} bg={'transparent'} px={'5'} color={'white'} fontSize={'13px'}>
+                <Button border={'1px'} rounded={'none'} _hover={{ bg: 'transparent', color: 'gray.400' }} bg={'transparent'} px={'5'} color={'white'} fontSize={'13px'}>
                     {CTA}
                 </Button>
-                <Button _hover={{ bg: 'transparent', color: 'gray.400' }} bg={'transparent'} px={'5'} color={'white'} fontSize={'13px'}>
+                <Button border={'1px'} rounded={'none'} _hover={{ bg: 'transparent', color: 'gray.400' }} bg={'transparent'} px={'5'} color={'white'} fontSize={'13px'}>
                     {CTA2}
                 </Button>
                 {!isMediumScreenOrLarger && <MobileDrawer menu={data} />}

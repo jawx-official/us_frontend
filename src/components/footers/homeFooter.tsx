@@ -36,7 +36,7 @@ const SocialButton = ({
 }) => {
     return (
         <chakra.button
-            bg={'#131B23'}
+            bg={'brand.primary'}
             rounded={'full'}
             w={'8'}
             h={'8'}
