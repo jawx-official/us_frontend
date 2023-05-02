@@ -4,6 +4,10 @@ import React from "react";
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { NavigationItems } from "@/data/navigation.interface";
 
+const CTA = "Log in"
+const CTA2 = "Get started"
+
+
 
 export default function MobileDrawer({ menu }: { menu: NavigationItems[] }) {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -19,6 +23,14 @@ export default function MobileDrawer({ menu }: { menu: NavigationItems[] }) {
                 onClose={onClose}
             >
                 <VStack>
+                    <Flex gap={"3"} w={'265px'} justifyContent={'start'}>
+                        <Button border={'1px'} borderColor={'gray.500'} rounded={'none'} _hover={{ bg: 'transparent', color: 'gray.400' }} bg={'transparent'} px={'5'} color={'white'} fontSize={'13px'}>
+                            {CTA}
+                        </Button>
+                        <Button border={'1px'} borderColor={'gray.500'} rounded={'none'} _hover={{ bg: 'transparent', color: 'gray.400' }} bg={'transparent'} px={'5'} color={'white'} fontSize={'13px'}>
+                            {CTA2}
+                        </Button>
+                    </Flex>
                     {menu.map((item, i) => item.dropdown ? (<Accordion allowMultiple>
                         <AccordionItem border={'none'}>
                             <Box width={"300px"}>
