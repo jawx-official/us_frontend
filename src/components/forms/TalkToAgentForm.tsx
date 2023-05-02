@@ -79,8 +79,8 @@ export default function TalkToAgentForm() {
                             Submit
                         </Button>
                         <FormControl>
-                            <FormHelperText display={"flex"}>
-                                You're creating an account with Urbanspaces and agree to our <Text color={"blue.400"} mr={'1'}>Terms of use</Text> and <Text color={"blue.400"} ml={'1'}>Privacy Policy</Text>
+                            <FormHelperText>
+                                You're creating an account with Urbanspaces and agree to our <Text as={'span'} color={"blue.400"} mr={'1'}>Terms of use</Text> and <Text as={'span'} color={"blue.400"} ml={'1'}>Privacy Policy</Text>
                             </FormHelperText>
                         </FormControl>
                     </Form>
