@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function LocationSearch() {
     return (
-        <Box py={'5'} w={"500px"}>
+        <Box py={'5'} w={{ base: "full", md: "500px" }}>
             <InputGroup size='md'>
                 <Input rounded={'none'} borderColor={'gray.500'} color={'gray.200'}
                     pr='100px'

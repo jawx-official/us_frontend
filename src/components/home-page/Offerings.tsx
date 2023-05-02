@@ -36,7 +36,7 @@ export default function Offerings() {
         <Flex justifyContent={'center'}>
             <Flex maxW={"1440px"} flexDir={'column'}>
                 {
-                    offerings.map((item, i) => <Flex bg={typeof item.image === "string" ? "white" : "#f5f5f5"} py={'10'} px={'16'} key={i} flexDir={{ base: "column", md: i % 2 === 0 ? 'row' : 'row-reverse' }}>
+                    offerings.map((item, i) => <Flex bg={typeof item.image === "string" ? "white" : "#f5f5f5"} py={'10'} px={{ base: "-0.5", md: '16' }} key={i} flexDir={{ base: item.image === "string" ? 'column' : 'column-reverse', md: i % 2 === 0 ? 'row' : 'row-reverse' }}>
                         <Box px={'5'} w={{ base: "full", md: "50%" }}>
                             {typeof item.image === "string" ? <Image src={item.image} h="350px" /> : item.image}
                         </Box>
