@@ -110,7 +110,7 @@ const data: NavigationItems[] = [
         dropdown: true,
         children: [
             {
-                label: "Pay small small",
+                label: "Paysmosmo",
                 path: "/pay-small-small"
             },
             {
@@ -153,10 +153,10 @@ export default function MainNavigation() {
             </HStack>}
 
             <HStack mr={''}>
-                <Button border={'1px'} rounded={'none'} _hover={{ bg: 'transparent', color: 'gray.400' }} bg={'transparent'} px={'5'} color={'white'} fontSize={'13px'}>
+                <Button border={'1px'} borderColor={'gray.500'} rounded={'none'} _hover={{ bg: 'transparent', color: 'gray.400' }} bg={'transparent'} px={'5'} color={'white'} fontSize={'13px'}>
                     {CTA}
                 </Button>
-                <Button border={'1px'} rounded={'none'} _hover={{ bg: 'transparent', color: 'gray.400' }} bg={'transparent'} px={'5'} color={'white'} fontSize={'13px'}>
+                <Button border={'1px'} borderColor={'gray.500'} rounded={'none'} _hover={{ bg: 'transparent', color: 'gray.400' }} bg={'transparent'} px={'5'} color={'white'} fontSize={'13px'}>
                     {CTA2}
                 </Button>
                 {!isMediumScreenOrLarger && <MobileDrawer menu={data} />}

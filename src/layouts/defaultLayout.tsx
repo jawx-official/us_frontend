@@ -1,6 +1,6 @@
 import HomeFooter from "@/components/footers/homeFooter"
 import MainNavigation from "@/components/navigations/mainNavigation"
-import { Box } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
 import React from "react"
 
 interface Props {
