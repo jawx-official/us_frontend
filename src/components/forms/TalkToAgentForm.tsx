@@ -80,7 +80,7 @@ export default function TalkToAgentForm() {
                         </Button>
                         <FormControl>
                             <FormHelperText>
-                                You're creating an account with Urbanspaces and agree to our <Text as={'span'} color={"blue.400"} mr={'1'}>Terms of use</Text> and <Text as={'span'} color={"blue.400"} ml={'1'}>Privacy Policy</Text>
+                                You're creating an account with Urbanspaces and agree to our <Text as={'span'} color={"blue.400"} mx={'1'}>Terms of use</Text> and <Text as={'span'} color={"blue.400"} ml={'1'}>Privacy Policy</Text>
                             </FormHelperText>
                         </FormControl>
                     </Form>
