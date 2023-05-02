@@ -1,6 +1,24 @@
 import { Box, Button, Flex, FormControl, FormErrorMessage, FormHelperText, FormLabel, Input, Spacer, Text, Textarea } from '@chakra-ui/react'
-import { Field, Form, Formik } from 'formik'
+import { Field, Form, Formik, FieldProps } from 'formik'
 import React from 'react'
+
+interface CustomFieldProps extends FieldProps {
+    field: {
+        value: string;
+        name: string;
+        onBlur: () => void;
+        onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    }
+}
+
+interface CustomFieldProps2 extends FieldProps {
+    field: {
+        value: string;
+        name: string;
+        onBlur: () => void;
+        onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+    }
+}
 
 export default function TalkToAgentForm() {
     return (
@@ -17,38 +35,38 @@ export default function TalkToAgentForm() {
                 {(props) => (
                     <Form>
                         <Field name='location'>
-                            {({ field, form }) => (
-                                <FormControl mb={'3'} isRequired isInvalid={form.errors.location && form.touched.location}>
+                            {({ field, form }: CustomFieldProps) => (
+                                <FormControl mb={'3'} isRequired isInvalid={!!form.errors.location && !!form.touched.location}>
                                     <FormLabel>Where are you searching for homes?</FormLabel>
                                     <Input borderColor={'gray.500'} rounded={'none'} {...field} placeholder='City, address, postcode' />
-                                    <FormErrorMessage>{form.errors.location}</FormErrorMessage>
+                                    <FormErrorMessage>{form.errors.location as string}</FormErrorMessage>
                                 </FormControl>
                             )}
                         </Field>
                         <Field name='email'>
-                            {({ field, form }) => (
-                                <FormControl mb={'3'} isRequired isInvalid={form.errors.email && form.touched.email}>
+                            {({ field, form }: CustomFieldProps) => (
+                                <FormControl mb={'3'} isRequired isInvalid={!!form.errors.email && !!form.touched.email}>
                                     <FormLabel>Email address</FormLabel>
                                     <Input borderColor={'gray.500'} rounded={'none'} {...field} placeholder='abraham@gmail.com' />
-                                    <FormErrorMessage>{form.errors.email}</FormErrorMessage>
+                                    <FormErrorMessage>{form.errors.email as string}</FormErrorMessage>
                                 </FormControl>
                             )}
                         </Field>
                         <Field name='phone'>
-                            {({ field, form }) => (
-                                <FormControl mb={'3'} isRequired isInvalid={form.errors.phone && form.touched.phone}>
+                            {({ field, form }: CustomFieldProps) => (
+                                <FormControl mb={'3'} isRequired isInvalid={!!form.errors.phone && !!form.touched.phone}>
                                     <FormLabel>Phone</FormLabel>
                                     <Input borderColor={'gray.500'} rounded={'none'} {...field} placeholder='Phone number' />
-                                    <FormErrorMessage>{form.errors.phone}</FormErrorMessage>
+                                    <FormErrorMessage>{form.errors.phone as string}</FormErrorMessage>
                                 </FormControl>
                             )}
                         </Field>
                         <Field name='message'>
-                            {({ field, form }) => (
-                                <FormControl isRequired isInvalid={form.errors.message && form.touched.message}>
+                            {({ field, form }: CustomFieldProps2) => (
+                                <FormControl isRequired isInvalid={!!form.errors.message && !!form.touched.message}>
                                     <FormLabel>What can we help you with?</FormLabel>
                                     <Textarea borderColor={'gray.500'} rounded={'none'} rows={7} {...field} placeholder="I'm interested in buying, selling or a free consult with our agent" />
-                                    <FormErrorMessage>{form.errors.message}</FormErrorMessage>
+                                    <FormErrorMessage>{form.errors.message as string}</FormErrorMessage>
                                 </FormControl>
                             )}
                         </Field>
